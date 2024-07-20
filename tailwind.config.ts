@@ -31,6 +31,9 @@ const config: Config = {
           200: "#0E0B49",
           300: "#313441",
         },
+        red: {
+          200: "#FF0000",
+        },
       },
       backgroundImage: {
         "button-gradient": "linear-gradient(to right bottom, #17126C, #251DB4)",

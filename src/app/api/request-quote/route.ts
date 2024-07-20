@@ -39,7 +39,7 @@ export async function POST(request: Request) {
     // Send quotation email
     const subject = "Quotation Request";
     const template = RequestQuoteHtml({ name, services, budget, website });
-    await sendEmail(email, subject, template);
+    // await sendEmail(email, subject, template);
 
     return NextResponse.json({ message: "Quotation sent to the email" });
   } catch (err) {

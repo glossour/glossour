@@ -8,7 +8,7 @@ export default function page() {
         <div className='container xl:px-40 lg:px-10 md:px-8 px-4 py-40 '>
             <div className="text-center ">
 
-                <h1 className="md:text-4xl lg:text-5xl text-3xl xl:text-6xl font-extrabold text-tertiary-200 leading-[48px] lg:leading-[72.8px] mb-2 mt-2">OUR FOUNDER</h1>
+                <h1 className="md:text-4xl lg:text-5xl text-3xl xl:text-6xl font-extrabold  text-red-200 leading-[48px] lg:leading-[72.8px] mb-2 mt-2">OUR FOUNDER</h1>
                 <p className="md:text-2xl text-sm md:leading-[34px] text-paragraph-200 font-normal mb-8">
                     Discover the dedicated team driving marketing excellence and innovation at Glossour.
 

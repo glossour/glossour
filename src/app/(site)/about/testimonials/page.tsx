@@ -33,7 +33,7 @@ export default function Page() {
             <div className="container xl:px-40 lg:px-10 md:px-8 px-4  py-28  mx-auto">
                 <div className="w-full lg:pt-40 lg:pb-20 lg:text-center  text-center">
                     <p className="text-sm font-bold tracking-widest leading-tight mb-1  text-white uppercase f-f-DM">TESTIMONIALS</p>
-                    <h1 className="lg:text-6xl md:text-5xl text-2xl font-extrabold lg:leading-[72.8px] md:leading-[48px] f-f-Lato mb-4   text-tertiary-200">Our Client Experiences.</h1>
+                    <h1 className="lg:text-6xl md:text-5xl text-2xl font-extrabold lg:leading-[72.8px] md:leading-[48px] f-f-Lato mb-4   text-red-200">Our Client Experiences.</h1>
                     <p className="lg:text-2xl md:text-xl text-sm md:leading-9 lg:text-center f-f-DM  text-center  text-paragraph-200 mb-8">We have been helping businesses reach their target audiences for over fifteen years. We have learned a lot over these years, and our clients have benefited. Hear directly from our clients how we have helped them overcome their rigorous business challenges.</p>
                 </div></div>
 

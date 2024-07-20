@@ -28,7 +28,7 @@ const PressRelease: FC = () => {
             <div className="container xl:px-40 lg:px-10 md:px-8 px-4 pt-40">
                 <div className="text-center pb-20">
                     <p className="text-sm font-bold tracking-[7px] leading-tight text-white uppercase">Press Release</p>
-                    <h1 className="md:text-4xl lg:text-5xl text-3xl xl:text-6xl font-extrabold text-tertiary-200 leading-[48px] lg:leading-[72.8px] mb-2 mt-2">OUR PRESS RELEASE SERVICES</h1>
+                    <h1 className="md:text-4xl lg:text-5xl text-3xl xl:text-6xl font-extrabold text-red-200 leading-[48px] lg:leading-[72.8px] mb-2 mt-2">OUR PRESS RELEASE SERVICES</h1>
                     <p className="md:text-2xl text-sm md:leading-[34px] text-paragraph-200 font-normal mb-8">
                         Explore our comprehensive press release services designed to amplify your brands message and reach your target audience effectively.
                     </p>

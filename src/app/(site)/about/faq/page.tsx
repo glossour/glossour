@@ -335,7 +335,7 @@ export default function Page() {
     return (
         <section className="leading-relaxed max-w-screen-xl mt-12 py-20 mx-auto px-4 md:px-8">
             <div className="space-y-3 text-center">
-                <h1 className="md:text-5xl text-2xl text-tertiary-200 font-bold">
+                <h1 className="md:text-5xl text-3xl text-red-200 font-bold">
                     Frequently Asked Questions
                 </h1>
                 <p className="text-paragraph-200 max-w-lg mx-auto text-lg">

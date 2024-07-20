@@ -11,7 +11,7 @@ const ContactPage: React.FC = () => {
 
                 {/* Left Half: Contact Information */}
                 <div className="w-full flex flex-col p-5 md:space-y-5 space-y-3">
-                    <h1 className="md:text-5xl text-3xl lg:text-6xl text-tertiary-200 font-extrabold">Contact Us</h1>
+                    <h1 className="md:text-5xl text-3xl lg:text-6xl text-red-200 font-extrabold">Contact Us</h1>
                     <p className='md:text-xl text-sm'>Our digital marketing team is always ready to help. Give us a call, send us an email, or fill out the form below.</p>
                     <div className="grid grid-cols-1 md:grid-cols-2  gap-5 w-full">
                         <div className=" flex  space-y-1 flex-col">
