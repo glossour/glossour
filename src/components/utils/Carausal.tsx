@@ -69,9 +69,9 @@ const IMAGES = [
         id: 5,
         imageSrc:
             "/services/press-release/5.png",
-        title: "Lokmat Times",
-        description: "Glossour emerges Asia's best digital marketing agency",
-        link: 'https://www.lokmattimes.com/business/glossour-emerges-asias-best-digital-marketing-agency/'
+        title: "Fox Interviewer",
+        description: "Best Digital strategist of India, Yash Mishra expressed his vision on role of digital platforms in influencing votersy",
+        link: 'https://foxinterviewer.com/politics/best-digital-strategist-of-india-yash-mishra-expressed-his-vision-on-role-of-digital-platforms-in-influencing-voters/'
     },
 
 ];
@@ -116,7 +116,7 @@ const Carusal = () => {
     return (
         <main className="w-full">
             <div className="flex flex-col w-full items-center">
-                <div className="relative w-full md:h-[70vh] h-[50vh] bg-secondary-100 rounded-2xl md:p-6 p-3 flex flex-col items-center m-4">
+                <div className="relative w-full md:h-[80vh] h-[50vh] bg-secondary-100 rounded-2xl md:p-6 p-3 flex flex-col items-center m-4">
                     <div className="relative h-full w-full overflow-hidden">
                         <AnimatePresence initial={false} custom={direction}>
                             <motion.div
@@ -134,7 +134,7 @@ const Carusal = () => {
                                 dragConstraints={{ left: 0, right: 0 }}
                                 dragElastic={1}
                                 onDragEnd={(_, dragInfo) => dragEndHandler(dragInfo)}
-                                className="absolute top-0 left-0 w-full rounded-2xl h-full bg-cover bg-no-repeat image"
+                                className="absolute top-0 left-0 w-full rounded-2xl h-full   bg-cover bg-no-repeat image"
                             >
                                 <div className="absolute bottom-0 left-0 right-0 p-4 flex justify-between bg-black    rounded-b-2xl text-white">
                                     <div> <h2 className="md:text-xl text-sm font-bold text-secondary-100">
