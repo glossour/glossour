@@ -25,7 +25,7 @@ export default function FeaturedBy() {
                     [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item, index) => (
                         <motion.div variants={variants} initial="intial" whileInView="animate" custom={index} key={index} className='flex justify-center bg-white  h-28 p-3 items-center w-full   shadow-md rounded-md  '>
                             <div>
-                                <img src={`/featured/${item}.png`} alt="trusted by" className='  object-contain ' />
+                                <img loading='lazy' src={`/featured/${item}.png`} alt="trusted by" className='  object-contain ' />
                             </div>
                         </motion.div>
                     ))

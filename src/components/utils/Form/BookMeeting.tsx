@@ -57,7 +57,7 @@ const BookMeetingForm: React.FC<BookMeetingFormProps> = ({ title }) => {
     return (
         <div className='w-full space-y-8 md:space-y-0 md:space-x-8 h-full flex md:flex-row flex-col p-4 bg-tertiary-200 rounded-md'>
             <div className='w-full flex flex-col h-full'>
-                <img src="/images/Glossour.svg" alt="" className='w-full h-1/2 object-fill' />
+                <img loading='lazy' src="/images/Glossour.svg" alt="" className='w-full h-1/2 object-fill' />
                 <div className=' w-full h-1/2  mt-5'>
                     <Calendar selectedDate={selectedDate} setSelectedDate={setSelectedDate} /></div>
             </div>

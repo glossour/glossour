@@ -66,7 +66,7 @@ const ServicesCard: React.FC<ServicesCardProps> = ({ subtitle, title, descriptio
                     <Link href={buttonLink}>   <button className='  md:mt-8 mt-3 rounded-md  text-black flex   bg-secondary-100  px-3 py-1.5  justify-center  font-semibold uppercase items-center md:text-sm  text-xs'><span>{buttonText}</span></button></Link>
                 </motion.div>
                 <motion.div variants={cardVariants} className=" w-full">
-                    <img src={image} alt="Team Image" className="rounded-lg w-full xl:h-96 lg:h-80 md:h-72 h-56" />
+                    <img loading='lazy' src={image} alt="Team Image" className="rounded-lg w-full xl:h-96 lg:h-80 md:h-72 h-56" />
 
                 </motion.div>
             </motion.div>

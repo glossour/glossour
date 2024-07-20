@@ -22,7 +22,7 @@ const Section3: React.FC<Section> = ({ heading, paragraph, img, bgImg, btn, subh
                         </div></div>
                     </div>
                     <div className="lg:w-5/12 w-full order-2 justify-center items-center flex">
-                        <img src={img} className="w-full  h-80 object-cover " alt="image" />
+                        <img loading='lazy' src={img} className="w-full  h-80 object-cover " alt="image" />
                     </div></div>
             </div>
             <RequestModal isOpen={isOpen} setIsOpen={setIsOpen} title={heading} />

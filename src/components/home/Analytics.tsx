@@ -102,12 +102,12 @@ export default function Analytics() {
                     </p></Reveal>
                     <Link href={'https://glossour-yt.vercel.app/'}> <button className='bg-button-gradient uppercase rounded-md text-white flex border-tertiary-200 border-2 px-3 py-1.5 justify-center font-normal items-center text-sm'>
                         <span> youtube Promotion</span>
-                        <span className='ml-2'><img src='/icons/right-arrow.svg' alt="Explore More" /></span>
+                        <span className='ml-2'><img loading='lazy' src='/icons/right-arrow.svg' alt="Explore More" /></span>
                     </button></Link>
                 </motion.div>
                 <Reveal width='100%'>
                     <motion.div className="w-full">
-                        <img src="/images/yt.png" alt="Team Image" className="rounded-lg w-full xl:h-96 lg:h-80 md:h-60 h-56" />
+                        <img loading='lazy' src="/images/yt.png" alt="Team Image" className="rounded-lg w-full xl:h-96 lg:h-80 md:h-60 h-56" />
                     </motion.div></Reveal>
             </motion.div>
 
@@ -115,7 +115,7 @@ export default function Analytics() {
             <Space h={16} />
             <motion.div className="analytics-section-3 w-full flex md:space-x-10 md:space-y-0 space-y-5 flex-col md:flex-row py-5 justify-center items-center">
                 <Reveal width='100%'><motion.div className="w-full">
-                    <img src="/images/meet.png" alt="Team Image" className="rounded-lg w-full xl:h-96 lg:h-80 md:h-60 h-56" />
+                    <img loading='lazy' src="/images/meet.png" alt="Team Image" className="rounded-lg w-full xl:h-96 lg:h-80 md:h-60 h-56" />
                 </motion.div></Reveal>
                 <motion.div className="w-full rounded-lg flex flex-col justify-start items-start h-full">
                     <Reveal width='100%'> <p className='text-paragraph-200 text-xs my-1'>BOOK A FREE MEETING</p></Reveal>
@@ -141,7 +141,7 @@ export default function Analytics() {
                     </ul></Reveal>
                     <Link href={'/book-meeting'}> <button className='bg-button-gradient rounded-md text-white flex border-tertiary-200 border-2 px-3 py-1.5 justify-center font-normal items-center text-sm'>
                         <span>BOOK NOW</span>
-                        <span className='ml-2'><img src='/icons/right-arrow.svg' alt="Book Now" /></span>
+                        <span className='ml-2'><img loading='lazy' src='/icons/right-arrow.svg' alt="Book Now" /></span>
                     </button></Link>
                 </motion.div>
             </motion.div>

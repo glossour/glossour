@@ -18,7 +18,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
                     </p></Reveal>
                 </div>
                 <Reveal width='100%'> <div className='w-full justify-end items-center md:flex hidden'>
-                    <img src='/images/hero.svg' className=' object-contain w-11/12' />
+                    <img loading='lazy' src='/images/hero.svg' className=' object-contain w-11/12' />
                 </div></Reveal>
 
             </div>

@@ -48,7 +48,7 @@ export default function Page() {
                             <div className="w-full flex flex-col justify-center items-center">
                                 <div key={currentIndex} className="flex justify-center gap-x-3">
                                     <div className="rounded-full w-16 h-16 border-2 border-tertiary-200">
-                                        <img alt="image" src={img} className="w-full rounded-full h-full object-cover" />
+                                        <img loading='lazy' alt="image" src={img} className="w-full rounded-full h-full object-cover" />
                                     </div>
                                     <div>
                                         <p className="md:text-sm md:leading-normal f-f-DM text-xs text-left  text-white">{company}</p>

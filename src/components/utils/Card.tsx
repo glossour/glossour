@@ -24,7 +24,7 @@ const Card: React.FC<CardProps> = ({ content, img, name, profession }) => {
                 </p>
             </div>
             <div className=' w-full h-1/4  flex justify-center items-center flex-col  '>
-                <img src={img} className=' rounded-full h-10 w-10' />
+                <img loading='lazy' src={img} className=' rounded-full h-10 w-10' />
                 <h1 className='  text-secondary-100 text-sm mt-1'>{name}</h1>
                 <p className=' text-paragraph-200 text-xs'>{profession}</p>
             </div>

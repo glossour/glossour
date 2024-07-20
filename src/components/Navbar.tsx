@@ -71,7 +71,7 @@ const Navbar: React.FC<NavbarProps> = ({ }) => {
         <>
             <div ref={navbarRef} className={` bg-card-gradient w-4/5 fixed top-0 md:hidden left-0 h-screen p-3 flex   justify-between flex-col z-[110] transition-all ${active ? 'translate-x-0 ' : ' -translate-x-full'}`}>
                 <div className=' flex flex-col  '>   <Link href={'/'} onClick={() => setActive(!active)}>
-                    <button className=''><img src='/logo/brand.svg' className='w-48 h-full' /></button>
+                    <button className=''><img loading='lazy' src='/logo/brand.svg' className='w-48 h-full' /></button>
                 </Link>
 
 
@@ -150,11 +150,11 @@ const Navbar: React.FC<NavbarProps> = ({ }) => {
                 <div>
                     <Link href={process.env.NEXT_PUBLIC_YT_LINK || ''} onClick={() => setActive(!active)}>
                         <button className=' px-3 py-1.5 w-full rounded  border-[#807cd4] text-xl  mt-3  bg-button-gradient border transition-all  justify-start items-center text-white font-normal flex  '>
-                            <span className=' mr-3'><img src='/icons/right-arrow.svg' />
+                            <span className=' mr-3'><img loading='lazy' src='/icons/right-arrow.svg' />
                             </span>Youtube Promotion</button>
                     </Link>
 
-                    <button onClick={() => setIsOpen(!isOpen)} className=' px-3 py-1.5 w-full   rounded  border-[#807cd4] text-xl mt-1.5  bg-button-gradient border transition-all  justify-start items-center text-white font-normal flex  '><span className=' mr-3'><img src='/icons/right-arrow.svg' /></span>get in touch</button>
+                    <button onClick={() => setIsOpen(!isOpen)} className=' px-3 py-1.5 w-full   rounded  border-[#807cd4] text-xl mt-1.5  bg-button-gradient border transition-all  justify-start items-center text-white font-normal flex  '><span className=' mr-3'><img loading='lazy' src='/icons/right-arrow.svg' /></span>get in touch</button>
 
                 </div>
             </div>
@@ -162,7 +162,7 @@ const Navbar: React.FC<NavbarProps> = ({ }) => {
 
                 <div className=' md:flex hidden justify-start space-x-8  items-center'>
                     <Link href={'/'}>
-                        <button className='  transition-all  justify-center items-center flex  text-lg font-semibold text-white '><img src='/logo/brand.svg' className='w-44 h-full' /></button>
+                        <button className='  transition-all  justify-center items-center flex  text-lg font-semibold text-white '><img loading='lazy' src='/logo/brand.svg' className='w-44 h-full' /></button>
                     </Link>
                     <div className=' flex '>
                         <Tabs />
@@ -170,14 +170,14 @@ const Navbar: React.FC<NavbarProps> = ({ }) => {
                 </div>
                 <div className=' space-x-3 md:flex hidden justify-center items-center'>
                     <Link href={process.env.NEXT_PUBLIC_YT_LINK || ''}>
-                        <button className=' px-3 py-1.5 rounded  border-[#807cd4] text-xs   bg-button-gradient border transition-all  justify-start items-center text-white font-normal flex  '><span className=' mr-3'><img src='/icons/right-arrow.svg' /></span>Youtube Promotion</button>
+                        <button className=' px-3 py-1.5 rounded  border-[#807cd4] text-xs   bg-button-gradient border transition-all  justify-start items-center text-white font-normal flex  '><span className=' mr-3'><img loading='lazy' src='/icons/right-arrow.svg' /></span>Youtube Promotion</button>
                     </Link>
 
-                    <button onClick={() => setIsOpen(!isOpen)} className=' px-3 py-1.5 rounded  border-[#807cd4] text-xs   bg-button-gradient border transition-all  justify-start items-center text-white font-normal flex  '><span className=' mr-3'><img src='/icons/right-arrow.svg' /></span>get in touch</button>
+                    <button onClick={() => setIsOpen(!isOpen)} className=' px-3 py-1.5 rounded  border-[#807cd4] text-xs   bg-button-gradient border transition-all  justify-start items-center text-white font-normal flex  '><span className=' mr-3'><img loading='lazy' src='/icons/right-arrow.svg' /></span>get in touch</button>
                 </div>
                 <div className='  md:hidden flex justify-between w-full'>
                     <Link href={'/'}>
-                        <button className=''><img src='/logo/brand.svg' className='w-32 h-full' /></button>
+                        <button className=''><img loading='lazy' src='/logo/brand.svg' className='w-32 h-full' /></button>
                     </Link>
 
                     <button className=' ' onClick={() => setActive(!active)}><FaBars color='#fff' size={15} /></button>

@@ -41,7 +41,7 @@ export const AuroraHero = () => {
                 </p></Reveal>
             </div>
             <div className='w-full justify-end items-center md:flex hidden'>
-                <img src='/images/hero.svg' className=' object-contain w-11/12' />
+                <img loading='lazy' src='/images/hero.svg' className=' object-contain w-11/12' />
             </div>
 
             {/* <div className="absolute inset-0 z-0">

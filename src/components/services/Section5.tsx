@@ -52,7 +52,7 @@ const Section5: React.FC<Section> = ({ heading, paragraph, subheading, img, btn 
                         </button>
                     </div>
 
-                    <img src={img} alt={img} className='lg:w-1/3 lg:h-96 w-full h-full object-contain' />
+                    <img loading='lazy' src={img} alt={img} className='lg:w-1/3 lg:h-96 w-full h-full object-contain' />
                 </div>
             </div>
             <RequestModal isOpen={isOpen} setIsOpen={setIsOpen} title={heading} />

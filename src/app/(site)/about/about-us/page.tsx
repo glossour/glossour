@@ -30,7 +30,7 @@ export default function Abous() {
                         We’re constantly searching for the brightest people from all over the world. People who are as trusted as they are talented and as passionate about their work as they are about their team. People who want to make marketing magic happen for legendary clients.
                     </p></Reveal>
                 </div>
-                <Reveal width='100%'>  <video src="/aboutus.mp4" autoPlay muted loop className='w-full  rounded-3xl  mt-10' /></Reveal>
+                <Reveal width='100%'>  <video src="https://firebasestorage.googleapis.com/v0/b/glossour-43a64.appspot.com/o/Digital%20Agency%20(1).mp4?alt=media&token=116eed1d-7b94-4757-ada7-860e2d0f8e92" autoPlay muted loop className='w-full  rounded-3xl  mt-10' /></Reveal>
                 <div className="grid my-20 grid-cols-1 lg:grid-cols-2 gap-10">
                     <Reveal width='100%'>  <motion.div >
                         <h2 className="text-4xl font-bold text-tertiary-200 mb-4">Our Mission</h2>
