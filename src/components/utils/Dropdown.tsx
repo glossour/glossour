@@ -189,7 +189,7 @@ const About: React.FC = () => {
         href: '/about/about-us'
     },
     {
-        title: 'Our Team',
+        title: 'Founder',
         href: '/about/team'
     },
     {

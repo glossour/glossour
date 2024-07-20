@@ -99,7 +99,7 @@ const Navbar: React.FC<NavbarProps> = ({ }) => {
 
                         <ul className=" text-white space-y-1 px-4">
                             <Link onClick={() => setActive(!active)} href={'/about/about-us'}> <li>About us</li></Link>
-                            <Link onClick={() => setActive(!active)} href={'/about/team'}> <li>Our team</li></Link>
+                            <Link onClick={() => setActive(!active)} href={'/about/team'}> <li>Founder</li></Link>
 
                             <Link onClick={() => setActive(!active)} href={'/about/contact'}> <li>Contact</li></Link>
 
