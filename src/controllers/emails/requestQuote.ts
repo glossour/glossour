@@ -3,13 +3,11 @@ export const RequestQuoteHtml = ({
   services,
   budget,
   website,
-  currency,
 }: {
   name: string;
   services: string;
   budget: number;
   website: string;
-  currency: string;
 }): string => {
   return `
    <!DOCTYPE html>
@@ -41,7 +39,7 @@ export const RequestQuoteHtml = ({
                 <p class="mb-4">Thank you for reaching out to us. Here is the quotation for the digital marketing
                     services you requested:</p>
                 <div class="mb-4">${services}</div>
-                <p class="mb-4"><strong>Budget:</strong> ${budget} ${currency}</p>
+                <p class="mb-4"><strong>Budget:</strong> ${budget} INR</p>
                 <p class="mb-4"><strong>Website:</strong> <a href="${website}" class="text-yellow-500">${website}</a>
                 </p>
                 <p class="mb-4">Please feel free to reach out if you have any questions or need further assistance.</p>
