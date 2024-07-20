@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.scroll-bar::-webkit-scrollbar{
+    display: none;
+}
+.quote-form{
+    @apply rounded-sm   bg-tertiary-200 lg:p-8 p-3 flex flex-col w-full h-full  font-medium text-white
+}
+.quote-form h1{
+    @apply text-2xl text-white font-semibold
+}
+.quote-form p{
+    @apply text-xl  text-gray-300 font-light 
+}
+.input-field{
+    @apply outline-none border-white border-b  py-2 text-lg mt-4 rounded-sm bg-transparent font-light w-full placeholder:text-white text-white
+}
+.text-error{
+    @apply text-[10px] font-light text-red-200  mt-0.5
+}
+
+.form-btn {
+    @apply w-full py-3 flex bg-white mt-6 text-tertiary-200 font-semibold text-sm rounded-sm justify-center items-center
+}
+.loader {
+    @apply w-5 h-5 border-4 border-t-4 border-t-blue-500 border-gray-200 rounded-full animate-spin;
+}
+.scroll-bar::-webkit-scrollbar{
+    display: none;
+}
