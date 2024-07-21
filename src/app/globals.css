@@ -15,7 +15,7 @@
     @apply text-xl  text-gray-300 font-light 
 }
 .input-field{
-    @apply outline-none border-white border-b  py-2 text-lg mt-4 rounded-sm bg-transparent font-light w-full placeholder:text-white text-white
+    @apply outline-none border-white border-b  py-2 text-lg mt-4 rounded-sm bg-transparent font-light w-full placeholder:text-gray-200 text-white
 }
 .text-error{
     @apply text-[10px] font-light text-red-200  mt-0.5

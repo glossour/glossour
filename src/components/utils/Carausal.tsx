@@ -34,7 +34,7 @@ const IMAGES = [
         link: 'https://www.business-standard.com/content/press-releases-ani/glossour-emerges-asia-s-best-digital-marketing-agency-122101300920_1.html'
     },
     {
-        id: 1,
+        id: 4,
         imageSrc:
             "/services/press-release/2.png",
         title: "Mid-Day",
@@ -52,19 +52,20 @@ const IMAGES = [
     {
         id: 3,
         imageSrc:
-            "/services/press-release/6.png",
-        title: "Asia Business Outlook",
-        description: "Indian Firm Glossour Emerges As Asia's Best Digital Marketing Agency",
-        link: 'https://www.asiabusinessoutlook.com/news/indian-firm-glossour-emerges-as-asia-s-best-digital-marketing-agency-nwid-1319.html'
-    },
-    {
-        id: 4,
-        imageSrc:
             "/services/press-release/4.png",
         title: "Republic News India",
         description: "Best Digital strategist of India, Yash Mishra expressed his vision on role of digital platforms in influencing voters",
         link: 'https://republicnewsindia.com/best-digital-strategist-of-india-yash-mishra-expressed-his-vision-on-role-of-digital-platforms-in-influencing-voters/'
     },
+    {
+        id: 1,
+        imageSrc:
+            "/services/press-release/6.png",
+        title: "Asia Business Outlook",
+        description: "Indian Firm Glossour Emerges As Asia's Best Digital Marketing Agency",
+        link: 'https://www.asiabusinessoutlook.com/news/indian-firm-glossour-emerges-as-asia-s-best-digital-marketing-agency-nwid-1319.html'
+    },
+
     {
         id: 5,
         imageSrc:
@@ -116,8 +117,8 @@ const Carusal = () => {
     return (
         <main className="w-full">
             <div className="flex flex-col w-full items-center">
-                <div className="relative w-full md:h-[80vh] h-[50vh] bg-secondary-100 rounded-2xl md:p-6 p-3 flex flex-col items-center m-4">
-                    <div className="relative h-full w-full overflow-hidden">
+                <div className="relative w-full md:h-[80vh]   bg-red-200 rounded-2xl md:p-6 p-3 flex flex-col items-center ">
+                    <div className="relative -top-10 h-[40vh] w-full overflow-hidden">
                         <AnimatePresence initial={false} custom={direction}>
                             <motion.div
                                 key={imageCount}
@@ -134,10 +135,10 @@ const Carusal = () => {
                                 dragConstraints={{ left: 0, right: 0 }}
                                 dragElastic={1}
                                 onDragEnd={(_, dragInfo) => dragEndHandler(dragInfo)}
-                                className="absolute top-0 left-0 w-full rounded-2xl h-full   bg-cover bg-no-repeat image"
+                                className="absolute top-0 left-0 w-full rounded-2xl h-full     bg-center bg-cover md:bg-cover bg-no-repeat image"
                             >
-                                <div className="absolute bottom-0 left-0 right-0 p-4 flex justify-between bg-black    rounded-b-2xl text-white">
-                                    <div> <h2 className="md:text-xl text-sm font-bold text-secondary-100">
+                                <div className="absolute bottom-0 left-0 right-0 md:p-4 p-2 flex justify-between bg-black    rounded-b-2xl text-white">
+                                    <div> <h2 className="md:text-xl text-sm font-bold  text-red-200">
                                         {IMAGES[activeImageIndex].title}
                                     </h2>
                                         <p className=" text-white text-xs md:text-xl">{IMAGES[activeImageIndex].description}</p></div>
@@ -149,7 +150,7 @@ const Carusal = () => {
                         </AnimatePresence>
                     </div>
 
-                    <div className="mt-3 flex">
+                    <div className="md:mt-3 -mt-5 flex">
                         {IMAGES.map((image, index) => (
                             <button
                                 key={image.id}

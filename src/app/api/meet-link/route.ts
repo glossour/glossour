@@ -53,7 +53,7 @@ export async function POST(req: Request) {
         });
 
         await newBooking.save();
-        const link = `meet.google.com/ara-yehm-wga`;
+        const link = `https://meet.google.com/pwv-mhzz-jsr`;
         const template = BookMeetConfimed({
           name,
           timeSlot: availableSlot,
@@ -66,6 +66,16 @@ export async function POST(req: Request) {
         await sendEmail(email, "Booking Confirmation", template);
         await sendEmail(
           process.env.EMAIL_SECRET ?? "",
+          "Booking Confirmation",
+          template
+        );
+        await sendEmail(
+          "Teamglossour@gmail.com" ?? "",
+          "Booking Confirmation",
+          template
+        );
+        await sendEmail(
+          "Officialglossour@gmail.com" ?? "",
           "Booking Confirmation",
           template
         );
@@ -105,6 +115,16 @@ export async function POST(req: Request) {
     await sendEmail(email, "Booking Confirmation", template);
     await sendEmail(
       process.env.EMAIL_SECRET ?? "",
+      "Booking Confirmation",
+      template
+    );
+    await sendEmail(
+      "Teamglossour@gmail.com" ?? "",
+      "Booking Confirmation",
+      template
+    );
+    await sendEmail(
+      "Officialglossour@gmail.com" ?? "",
       "Booking Confirmation",
       template
     );

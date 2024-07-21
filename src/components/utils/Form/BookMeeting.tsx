@@ -104,7 +104,7 @@ const BookMeetingForm: React.FC<BookMeetingFormProps> = ({ title }) => {
                         />
                     </div>
                 </div>
-                <div className='flex justify-start items-center w-full space-x-3'>
+                {/* <div className='flex justify-start items-center w-full space-x-3'>
                     <Controller
                         name='currency'
                         defaultValue={'INR'}
@@ -125,7 +125,7 @@ const BookMeetingForm: React.FC<BookMeetingFormProps> = ({ title }) => {
                             )}
                         />
                     </div>
-                </div>
+                </div> */}
                 <Controller
                     name='service'
                     defaultValue={Services[0]}
