@@ -6,17 +6,17 @@ import { motion } from 'framer-motion';
 type FAQItem = { q: string; a: string; };
 type FAQData = {
     [key: string]: FAQItem[];
-    'Web Development': FAQItem[];
+    'Website Development': FAQItem[];
     'Influencer Marketing': FAQItem[];
-    'SEO': FAQItem[];
+    'Search Engine Optimization(SEO)': FAQItem[];
     'Social Media': FAQItem[];
-    'PPC/Ads': FAQItem[];
+    'Pay-per-click (PPC)': FAQItem[];
     'Press Release': FAQItem[];
     'Reputation Mangement': FAQItem[];
 };
 
 const faqData: FAQData = {
-    'Web Development': [
+    'Website Development': [
         {
             q: "What is web development?",
             a: "Web development involves building and maintaining websites, including aspects like web design, web publishing, web programming, and database management."
@@ -100,7 +100,7 @@ const faqData: FAQData = {
             a: "Influencers can be found through social media platforms, influencer marketing platforms, and by conducting hashtag and keyword searches relevant to your niche."
         }
     ],
-    'SEO': [
+    'Search Engine Optimization(SEO)': [
         {
             q: "What is SEO?",
             a: "SEO stands for Search Engine Optimization, which involves optimizing a website to rank higher in search engine results."
@@ -184,7 +184,7 @@ const faqData: FAQData = {
             a: "Social media ads are paid advertisements that appear on social media platforms, targeting specific audiences to promote products or services."
         }
     ],
-    'PPC/Ads': [
+    'Pay-per-click (PPC)': [
         {
             q: "What is PPC?",
             a: "PPC stands for Pay-Per-Click, a model of internet marketing where advertisers pay a fee each time their ad is clicked."
@@ -314,7 +314,7 @@ const faqData: FAQData = {
 
 
 export default function Page() {
-    const services: string[] = ['Web Development', 'Influencer Marketing', 'SEO', 'Social Media', 'PPC/Ads', 'Press Release', 'Reputation Mangement'];
+    const services: string[] = ['Website Development', 'Influencer Marketing', 'Search Engine Optimization(SEO)', 'Social Media', 'Pay-per-click (PPC)', 'Press Release', 'Reputation Mangement'];
     const [active, setActive] = useState<number>(0);
     const [faqsList, setFaqsList] = useState(faqData[services[0]]);
     const [dimensions, setDimensions] = useState<{ width: number; left: number }>({ width: 0, left: 0 });

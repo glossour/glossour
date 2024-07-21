@@ -12,7 +12,7 @@ const SpringModal = ({ isOpen, setIsOpen }: { isOpen: boolean, setIsOpen: React.
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     onClick={() => setIsOpen(false)}
-                    className="bg-slate-900/20 backdrop-blur scroll-bar  p-8 fixed inset-0 z-[100000] w-full h-full grid place-items-center overflow-y-scroll cursor-pointer"
+                    className="bg-slate-900/20 backdrop-blur scroll-bar  md:p-8 fixed inset-0 z-[1000] w-full h-full grid place-items-center overflow-y-scroll cursor-pointer"
                 >
                     <motion.div
                         initial={{ scale: 0, rotate: "12.5deg" }}

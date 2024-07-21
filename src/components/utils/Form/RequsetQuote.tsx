@@ -13,7 +13,7 @@ const RequestModal = ({ isOpen, setIsOpen, title }: { isOpen: boolean, setIsOpen
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     onClick={() => setIsOpen(false)}
-                    className="bg-slate-900/20 backdrop-blur scroll-bar  md:p-8 fixed inset-0 z-[10000000000000000000000000] w-full h-screen top-0 left-0 grid place-items-center overflow-y-scroll cursor-pointer"
+                    className="bg-slate-900/20 backdrop-blur scroll-bar  md:p-8 fixed inset-0 z-[1000] w-full h-screen top-0 left-0 grid place-items-center overflow-y-scroll cursor-pointer"
                 >
                     <motion.div
                         initial={{ scale: 0, rotate: "12.5deg" }}

@@ -233,7 +233,7 @@ const About: React.FC = () => {
 };
 
 const Services: React.FC = () => {
-    const [active, setActive] = useState<string>('Web Development');
+    const [active, setActive] = useState<string>('Website Development');
     const hoverRefs = useRef<(HTMLAnchorElement | null)[]>([]);
 
     const ServicesInfo: any[] = [
@@ -275,7 +275,7 @@ const Services: React.FC = () => {
             buttonLink: '/services/social-media-marketing'
         },
         {
-            subtitle: 'PPC Advertising',
+            subtitle: 'Pay-per-click (PPC)',
             title: 'Effective Pay-per-click (PPC) Campaigns',
             description: 'Maximize your online sales and revenue with our PPC services. We offer Google Ads, Bing Ads, and Facebook Ads to ensure your ads reach the right audience and achieve your marketing goals.',
             image: '/services-brief/ppc.png',

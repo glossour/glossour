@@ -34,6 +34,20 @@ const Navbar: React.FC<NavbarProps> = ({ }) => {
     const [isOpen, setIsOpen] = useState(false);
     const pathname = usePathname()
     const [active, setActive] = useState(false)
+    const [activeDropdown, setActiveDropdown] = useState({
+        about: false,
+        services: false,
+    });
+
+    type DropdownKeys = keyof typeof activeDropdown;
+
+    const handleDropdownToggle = (dropdown: DropdownKeys) => {
+        setActiveDropdown((prev) => ({
+            ...prev,
+            [dropdown]: !prev[dropdown],
+        }));
+    };
+
 
     const navbarRef = useRef<HTMLDivElement>(null);
 
@@ -67,21 +81,23 @@ const Navbar: React.FC<NavbarProps> = ({ }) => {
             })
         }
     }, [pathname])
+
+
+
     return (
         <>
-            <div ref={navbarRef} className={` bg-card-gradient w-4/5 fixed top-0 md:hidden left-0 h-screen p-3 flex   justify-between flex-col z-[110] transition-all ${active ? 'translate-x-0 ' : ' -translate-x-full'}`}>
-                <div className=' flex flex-col  '>   <Link href={'/'} onClick={() => setActive(!active)}>
-                    <button className=''><img loading='lazy' src='/logo/brand.svg' className='w-48 h-full' /></button>
-                </Link>
+            <div ref={navbarRef} className={`bg-card-gradient w-4/5 fixed top-0 md:hidden left-0 h-screen p-3 flex justify-between flex-col z-[110] transition-all ${active ? 'translate-x-0' : '-translate-x-full'}`}>
+                <div className='flex flex-col'>
+                    <Link href={'/'} onClick={() => setActive(!active)}>
+                        <button className=''><img loading='lazy' src='/logo/brand.svg' className='w-48 h-full' /></button>
+                    </Link>
 
-
-                    <details className="group [&_summary::-webkit-details-marker]:hidden mt-5">
-                        <summary
-                            className="flex  text-white text-xl   cursor-pointer items-center justify-between rounded-lg  py-2 "
+                    <div className={`mt-5 bg-white text-black rounded font-semibold`}>
+                        <div onClick={() => handleDropdownToggle('about')}
+                            className="flex text-xl px-2 cursor-pointer items-center justify-between rounded-lg py-1.5"
                         >
-                            <span className=""> About </span>
-
-                            <span className="shrink-0 transition duration-300 group-open:-rotate-180">
+                            <span>About</span>
+                            <span className={`shrink-0 transition duration-300 ${activeDropdown.about ? "-rotate-180" : "rotate-0"}`}>
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     className="h-8 w-8"
@@ -95,28 +111,23 @@ const Navbar: React.FC<NavbarProps> = ({ }) => {
                                     />
                                 </svg>
                             </span>
-                        </summary>
+                        </div>
 
-                        <ul className=" text-white space-y-1 px-4">
-                            <Link onClick={() => setActive(!active)} href={'/about/about-us'}> <li>About us</li></Link>
-                            <Link onClick={() => setActive(!active)} href={'/about/team'}> <li>Founder</li></Link>
-
-                            <Link onClick={() => setActive(!active)} href={'/about/contact'}> <li>Contact</li></Link>
-
-                            <Link onClick={() => setActive(!active)} href={'/about/testimonials'}> <li>Testimonial</li></Link>
-                            <Link onClick={() => setActive(!active)} href={'/about/faq'}> <li>FAQ</li></Link>
-
-
-
+                        <ul className={`overflow-hidden transition-all duration-300 px-3 ${activeDropdown.about ? 'max-h-screen ' : 'max-h-0'}`}>
+                            <Link onClick={() => setActive(!active)} href={'/about/about-us'}><li className='py-1'>About us</li></Link>
+                            <Link onClick={() => setActive(!active)} href={'/about/team'}><li className='py-1'>Founder</li></Link>
+                            <Link onClick={() => setActive(!active)} href={'/about/contact'}><li className='py-1'>Contact</li></Link>
+                            <Link onClick={() => setActive(!active)} href={'/about/testimonials'}><li className='py-1'>Testimonial</li></Link>
+                            <Link onClick={() => setActive(!active)} href={'/about/faq'}><li className='py-1'>FAQ</li></Link>
                         </ul>
-                    </details>
-                    <details className="group [&_summary::-webkit-details-marker]:hidden  ">
-                        <summary
-                            className="flex  text-white text-xl   cursor-pointer items-center justify-between rounded-lg   "
-                        >
-                            <span className="">Services</span>
+                    </div>
 
-                            <span className="shrink-0 transition duration-300 group-open:-rotate-180">
+                    <div className='mt-2 bg-white text-black rounded font-semibold'>
+                        <div onClick={() => handleDropdownToggle('services')}
+                            className="flex  text-xl cursor-pointer items-center px-2 py-1.5 justify-between rounded-lg"
+                        >
+                            <span>Services</span>
+                            <span className={`shrink-0 transition duration-300 ${activeDropdown.services ? "-rotate-180" : "rotate-0"}`}>
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     className="h-8 w-8"
@@ -130,32 +141,32 @@ const Navbar: React.FC<NavbarProps> = ({ }) => {
                                     />
                                 </svg>
                             </span>
-                        </summary>
+                        </div>
 
-                        <ul className=" text-white space-y-1 px-4">
-                            <Link onClick={() => setActive(!active)} href={'/services/web-development'}> <li>Web Development</li></Link>
-                            <Link onClick={() => setActive(!active)} href={'/services/seo'}> <li>Seo</li></Link>
-                            <Link onClick={() => setActive(!active)} href={'/services/social-media-marketing'}> <li>Social Media Marketing</li></Link>
-                            <Link onClick={() => setActive(!active)} href={'/services/influencer-marketing'}> <li>Influencer Marketing</li></Link>
-                            <Link onClick={() => setActive(!active)} href={'/services/ppc'}> <li>PPC/Ads</li></Link>
-                            <Link onClick={() => setActive(!active)} href={'/services/reputation-management'}> <li>Reputation Mangement</li></Link>
-                            <Link onClick={() => setActive(!active)} href={'/services/press-release'}> <li>Press Release</li></Link>
-
-
+                        <ul className={`overflow-hidden transition-all duration-300 px-3 ${activeDropdown.services ? 'max-h-screen' : 'max-h-0'}`}>
+                            <Link onClick={() => setActive(!active)} href={'/services/web-development'}><li className='py-1'>Web Development</li></Link>
+                            <Link onClick={() => setActive(!active)} href={'/services/seo'}><li className='py-1'>SEO</li></Link>
+                            <Link onClick={() => setActive(!active)} href={'/services/social-media-marketing'}><li className='py-1'>Social Media Marketing</li></Link>
+                            <Link onClick={() => setActive(!active)} href={'/services/influencer-marketing'}><li className='py-1'>Influencer Marketing</li></Link>
+                            <Link onClick={() => setActive(!active)} href={'/services/ppc'}><li className='py-1'>PPC/Ads</li></Link>
+                            <Link onClick={() => setActive(!active)} href={'/services/reputation-management'}><li className='py-1'>Reputation Management</li></Link>
+                            <Link onClick={() => setActive(!active)} href={'/services/press-release'}><li className='py-1'>Press Release</li></Link>
                         </ul>
-                    </details>
+                    </div>
 
-                    <Link href={'/book-meeting'}> <button onClick={() => setActive(!active)} className='  text-white text-xl  mt-2   flex justify-start'>Book Meeting</button></Link>
+                    <Link href={'/book-meeting'}>
+                        <button onClick={() => setActive(!active)} className='text-white text-xl mt-2 px-2 py-1.5 flex justify-start'>Book Meeting</button>
+                    </Link>
                 </div>
                 <div>
                     <Link href={process.env.NEXT_PUBLIC_YT_LINK || ''} onClick={() => setActive(!active)}>
-                        <button className=' px-3 py-1.5 w-full rounded  border-[#807cd4] text-xl  mt-3  bg-button-gradient border transition-all  justify-start items-center text-white font-normal flex  '>
-                            <span className=' mr-3'><img loading='lazy' src='/icons/right-arrow.svg' />
-                            </span>Youtube Promotion</button>
+                        <button className='px-3 py-1.5 w-full rounded border-[#807cd4] text-xl mt-3 bg-button-gradient border transition-all justify-start items-center text-white font-normal flex'>
+                            <span className='mr-3'><img loading='lazy' src='/icons/right-arrow.svg' /></span>Youtube Promotion
+                        </button>
                     </Link>
-
-                    <button onClick={() => setIsOpen(!isOpen)} className=' px-3 py-1.5 w-full   rounded  border-[#807cd4] text-xl mt-1.5  bg-button-gradient border transition-all  justify-start items-center text-white font-normal flex  '><span className=' mr-3'><img loading='lazy' src='/icons/right-arrow.svg' /></span>get in touch</button>
-
+                    <button onClick={() => setIsOpen(!isOpen)} className='px-3 py-1.5 w-full rounded border-[#807cd4] text-xl mt-1.5 bg-button-gradient border transition-all justify-start items-center text-white font-normal flex'>
+                        <span className='mr-3'><img loading='lazy' src='/icons/right-arrow.svg' /></span>Get in touch
+                    </button>
                 </div>
             </div>
             <nav className=' navbar xl:max-w-5xl lg:max-w-3xl md:max-w-3xl z-[100] backdrop-blur-md backdrop-filter bg-opacity-30 bg-secondary-300    sm:max-w-sm  max-w-xs top-5  fixed rounded-2xl   border-tertiary-200 border-2   right-0 left-0 mx-auto  md:p-3 py-2 pr-3 text-[14px]  font-medium  justify-between items-center    text-white flex space-x-3'>
