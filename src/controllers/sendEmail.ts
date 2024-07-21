@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 dotenv.config();
 export async function sendEmail(to: string, subject: string, template: string) {
   const transporter = nodemailer.createTransport({
-    host: "smtp.secureserver.net",
+    host: "smtpout.secureserver.net",
     port: 465, // SSL port
     secure: true, // true for 465, false for other ports
     auth: {

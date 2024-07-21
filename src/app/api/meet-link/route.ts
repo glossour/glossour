@@ -63,12 +63,12 @@ export async function POST(req: Request) {
           service,
           link,
         });
-        // await sendEmail(email, 'Booking Confirmati', template);
-        // await sendEmail(
-        //   process.env.EMAIL_SECRET ?? "",
-        //   "Booking Confirmation",
-        //   template
-        // );
+        await sendEmail(email, "Booking Confirmation", template);
+        await sendEmail(
+          process.env.EMAIL_SECRET ?? "",
+          "Booking Confirmation",
+          template
+        );
         return NextResponse.json({
           message: "Booking created successfully with the next available slot",
           timeSlot: availableSlot,
@@ -102,12 +102,12 @@ export async function POST(req: Request) {
       link,
     });
 
-    // await sendEmail(email, "Booking Confirmati", template);
-    // await sendEmail(
-    //   process.env.EMAIL_SECRET ?? "",
-    //   "Booking Confirmation",
-    //   template
-    // );
+    await sendEmail(email, "Booking Confirmation", template);
+    await sendEmail(
+      process.env.EMAIL_SECRET ?? "",
+      "Booking Confirmation",
+      template
+    );
 
     return NextResponse.json({ message: "Booking created successfully" });
   } catch (error) {
