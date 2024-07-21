@@ -337,7 +337,7 @@ const Services: React.FC = () => {
                         className="w-full h-28 rounded-xl object-cover"
                     />
                     <Link href={ServicesInfo.find(item => item.subtitle === active)?.buttonLink || ''}>
-                        <button className="bg-button-gradient mt-3 w-full rounded-md text-white flex border-tertiary-200 border-2 px-2 py-1 justify-center font-normal items-center text-sm">
+                        <button className="bg-button-gradient mt-1 w-full rounded-md text-white flex border-tertiary-200 border-2 px-2 py-1 justify-center font-normal items-center text-sm">
                             <span>Request Quote</span>
                         </button>
                     </Link>
