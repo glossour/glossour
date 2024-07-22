@@ -1,9 +1,9 @@
 export const testimonials = [
   {
-    company: "Sanbun Investments",
+    company: "Innovura Entertainment",
     description:
       "Partnering with Glossour has transformed our investment strategies. Their expertise in digital marketing has helped us reach a broader audience and significantly increased our client base. We highly recommend their services!",
-    name: "Nishaan Singh",
+    name: "Innovura Entertainment",
     img: "/testimonial/1.png",
   },
   {
