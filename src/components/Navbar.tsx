@@ -12,24 +12,6 @@ import RequestModal from './utils/Form/RequsetQuote';
 interface NavbarProps {
 }
 
-const navigation: any[] = [
-    {
-        title: 'HOME', href: '/'
-    },
-    {
-        title: 'ABOUT', href: '/about'
-    },
-    {
-        title: 'SERVICES', href: '/services'
-    },
-    {
-        title: 'CONTACT', href: '/contact'
-    },
-    {
-        title: 'HELP', href: '/help'
-    },
-
-]
 const Navbar: React.FC<NavbarProps> = ({ }) => {
     const [isOpen, setIsOpen] = useState(false);
     const pathname = usePathname()
@@ -113,7 +95,7 @@ const Navbar: React.FC<NavbarProps> = ({ }) => {
                             </span>
                         </div>
 
-                        <ul className={`overflow-hidden transition-all duration-300 px-3 ${activeDropdown.about ? 'max-h-screen ' : 'max-h-0'}`}>
+                        <ul className={`overflow-hidden transition-all text-sm duration-300 px-3 ${activeDropdown.about ? 'max-h-screen ' : 'max-h-0'}`}>
                             <Link onClick={() => setActive(!active)} href={'/about/about-us'}><li className='py-1'>About us</li></Link>
                             <Link onClick={() => setActive(!active)} href={'/about/team'}><li className='py-1'>Founder</li></Link>
                             <Link onClick={() => setActive(!active)} href={'/about/contact'}><li className='py-1'>Contact</li></Link>
@@ -143,12 +125,12 @@ const Navbar: React.FC<NavbarProps> = ({ }) => {
                             </span>
                         </div>
 
-                        <ul className={`overflow-hidden transition-all duration-300 px-3 ${activeDropdown.services ? 'max-h-screen' : 'max-h-0'}`}>
-                            <Link onClick={() => setActive(!active)} href={'/services/web-development'}><li className='py-1'>Web Development</li></Link>
-                            <Link onClick={() => setActive(!active)} href={'/services/seo'}><li className='py-1'>SEO</li></Link>
+                        <ul className={`overflow-hidden transition-all duration-300 text-sm  px-3 ${activeDropdown.services ? 'max-h-screen' : 'max-h-0'}`}>
+                            <Link onClick={() => setActive(!active)} href={'/services/web-development'}><li className='py-1'>Website Development</li></Link>
+                            <Link onClick={() => setActive(!active)} href={'/services/seo'}><li className='py-1'>Search Engine Optimization(SEO)</li></Link>
                             <Link onClick={() => setActive(!active)} href={'/services/social-media-marketing'}><li className='py-1'>Social Media Marketing</li></Link>
                             <Link onClick={() => setActive(!active)} href={'/services/influencer-marketing'}><li className='py-1'>Influencer Marketing</li></Link>
-                            <Link onClick={() => setActive(!active)} href={'/services/ppc'}><li className='py-1'>PPC/Ads</li></Link>
+                            <Link onClick={() => setActive(!active)} href={'/services/ppc'}><li className='py-1'>Pay-per-click (PPC)</li></Link>
                             <Link onClick={() => setActive(!active)} href={'/services/reputation-management'}><li className='py-1'>Reputation Management</li></Link>
                             <Link onClick={() => setActive(!active)} href={'/services/press-release'}><li className='py-1'>Press Release</li></Link>
                         </ul>

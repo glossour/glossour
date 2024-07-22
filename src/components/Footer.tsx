@@ -49,7 +49,9 @@ export default function Footer() {
     const onSubmit = async () => {
         setLoading(true);
         if (email === '' || null) {
-            toast.error('Please enter your email address');
+            toast.error({
+                duration: 4000, // Duration in milliseconds (e.g., 4000ms = 4 seconds)
+            }, 'Please enter your email address');
             setLoading(false);
             return
         }
@@ -68,7 +70,9 @@ export default function Footer() {
                 setEmail('');
             }
         } catch (error) {
-            toast.error('An error occurred. Please try again.');
+            toast.error({
+                duration: 4000, // Duration in milliseconds (e.g., 4000ms = 4 seconds)
+            }, 'An error occurred. Please try again.');
             setEmail('');
         } finally {
             setEmail('');

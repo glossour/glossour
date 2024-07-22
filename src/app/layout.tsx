@@ -46,7 +46,8 @@ export default function RootLayout({
 
       </head>
       <body className={`${inter.className} bg-secondary-300`}>
-        <div ><Toaster position="bottom-left" /></div>
+        <div >
+          <Toaster position="bottom-left" /></div>
         <Navbar />
         {children}
         <WhatsApp />

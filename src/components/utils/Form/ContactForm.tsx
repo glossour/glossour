@@ -22,14 +22,20 @@ const ContactForm: React.FC = () => {
             const response = await axios.post('/api/contact', data); // Replace with your API endpoint
 
             if (response.status === 200) {
-                toast.success(response.data.message);
+                toast.success(response.data.message, {
+                    duration: 4000, // Duration in milliseconds (e.g., 4000ms = 4 seconds)
+                });
                 reset()
             } else {
-                toast.error(response.data.message);
+                toast.error(response.data.message, {
+                    duration: 4000, // Duration in milliseconds (e.g., 4000ms = 4 seconds)
+                });
             }
         } catch (error) {
             console.error('Error sending message:', error);
-            toast.error('An error occurred. Please try again.');
+            toast.error('An error occurred. Please try again.', {
+                duration: 4000, // Duration in milliseconds (e.g., 4000ms = 4 seconds)
+            },);
         } finally {
 
             setLoading(false);
@@ -39,7 +45,9 @@ const ContactForm: React.FC = () => {
 
     const onError = (errors: any) => {
         console.log(errors);
-        toast.error('Please correct the errors in the form.');
+        toast.error('Please Fill all the required field', {
+            duration: 4000, // Duration in milliseconds (e.g., 4000ms = 4 seconds)
+        },);
     };
 
     return (
@@ -66,7 +74,7 @@ const ContactForm: React.FC = () => {
             <Controller
                 name='mobileNumber'
                 defaultValue={''}
-                rules={{ required: 'Mobile Number is required' }}
+
                 control={control}
                 render={({ field }) => (
                     <Input error={errors.mobileNumber?.message || ''} label='Mobile' type='text' placeholder='Enter mobile number' {...field} tabIndex={3} />

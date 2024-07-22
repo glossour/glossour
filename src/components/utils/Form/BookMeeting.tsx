@@ -33,14 +33,21 @@ const BookMeetingForm: React.FC<BookMeetingFormProps> = ({ title }) => {
             const response = await axios.post('/api/meet-link', payload);
 
             if (response.status === 200) {
-                toast.success(response.data.message);
+                toast.success(response.data.message, {
+                    duration: 4000, // Duration in milliseconds (e.g., 4000ms = 4 seconds)
+                });
                 reset()
             } else {
-                toast.error(response.data.message);
+                toast.error(response.data.message, {
+                    duration: 4000, // Duration in milliseconds (e.g., 4000ms = 4 seconds)
+
+                });
             }
         } catch (error) {
             console.error('Error sending quotation request:', error);
-            toast.error('An error occurred. Please try again.');
+            toast.error('An error occurred. Please try again.', {
+                duration: 4000, // Duration in milliseconds (e.g., 4000ms = 4 seconds)
+            },);
         } finally {
             setLoading(false);
             reset()
@@ -49,7 +56,9 @@ const BookMeetingForm: React.FC<BookMeetingFormProps> = ({ title }) => {
 
     const onError = (errors: any) => {
         console.log(errors);
-        toast.error('Please correct the errors in the form.');
+        toast.error('Please correct the errors in the form.', {
+            duration: 4000, // Duration in milliseconds (e.g., 4000ms = 4 seconds)
+        },);
     };
 
 
