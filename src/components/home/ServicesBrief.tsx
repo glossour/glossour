@@ -6,35 +6,16 @@ import ServicesCard from '../utils/ServicesCard';
 interface ServicesBriefProps { }
 
 const ServicesBrief: React.FC<ServicesBriefProps> = () => {
-    const services: string[] = ['Website Development', 'Influencer Marketing', 'Search Engine Optimization(SEO)', 'Social Media', 'Pay-per-click (PPC)', 'Press Release', 'Reputation Mangement'];
+    const services: string[] = ['Press Release', 'Social Media Marketing', 'Website Development', 'Search Engine Optimization(SEO)', 'Pay-per-click (PPC)', 'Reputation Management', 'Influencer Marketing',];
     const ServicesInfo: any[] = [
         {
-            subtitle: 'Website Development',
-            title: 'Cutting-Edge Web Development',
-            description: 'We build websites that are fast, secure, and easy to manage. Our development process ensures your site is responsive, user-friendly, and SEO optimized for maximum reach and performance.',
-            image: '/services-brief/web.png',
-            features: ['Fast', 'Secure', 'User-Friendly'],
-            buttonText: 'EXPLORE WEB DEVELOPMENT',
-            buttonLink: '/services/web-development'
-        },
-        {
-            subtitle: 'Influencer Marketing',
-            title: 'Impactful Influencer Marketing',
-            description: 'Amplify your brand’s reach and engagement through our strategic Influencer Marketing services. We connect you with the right influencers to create authentic and compelling content that resonates with your target audience.',
-            image: '/services-brief/influencer.png',
-            features: ['Influencer Selection', 'Content Creation', 'Campaign Management'],
-            buttonText: 'DISCOVER INFLUENCER MARKETING',
-            buttonLink: '/services/influencer-marketing'
-        },
-
-        {
-            subtitle: 'Search Engine Optimization(SEO)',
-            title: 'Expert Search Engine Optimization',
-            description: 'Enhance your online visibility and drive organic traffic with our expert SEO services. We offer On-Page SEO, Off-Page SEO, and Technical SEO to ensure your site ranks higher on search engines.',
-            image: '/services-brief/seo.png',
-            features: ['On-Page SEO', 'Off-Page SEO', 'Technical SEO'],
-            buttonText: 'LEARN ABOUT SEO',
-            buttonLink: '/services/seo'
+            subtitle: 'Press Release Services',
+            title: 'Impactful Press Releases',
+            description: 'Enhance your online visibility and credibility with our Press Release services. We provide Press Release Writing and Distribution to ensure your news reaches the right audience.',
+            image: '/services-brief/press.png',
+            features: ['Press Release Writing', 'Press Release Distribution', 'Increase Visibility'],
+            buttonText: 'DISCOVER PRESS RELEASE SERVICES',
+            buttonLink: '/services/press-release'
         },
         {
             subtitle: 'Social Media Marketing',
@@ -46,22 +27,31 @@ const ServicesBrief: React.FC<ServicesBriefProps> = () => {
             buttonLink: '/services/social-media-marketing'
         },
         {
-            subtitle: 'PPC Advertising',
+            subtitle: 'Website Development',
+            title: 'Cutting-Edge Web Development',
+            description: 'We build websites that are fast, secure, and easy to manage. Our development process ensures your site is responsive, user-friendly, and SEO optimized for maximum reach and performance.',
+            image: '/services-brief/web.png',
+            features: ['Fast', 'Secure', 'User-Friendly'],
+            buttonText: 'EXPLORE WEB DEVELOPMENT',
+            buttonLink: '/services/web-development'
+        },
+        {
+            subtitle: 'Search Engine Optimization(SEO)',
+            title: 'Expert Search Engine Optimization',
+            description: 'Enhance your online visibility and drive organic traffic with our expert SEO services. We offer On-Page SEO, Off-Page SEO, and Technical SEO to ensure your site ranks higher on search engines.',
+            image: '/services-brief/seo.png',
+            features: ['On-Page SEO', 'Off-Page SEO', 'Technical SEO'],
+            buttonText: 'LEARN ABOUT SEO',
+            buttonLink: '/services/seo'
+        },
+        {
+            subtitle: 'Pay-per-click (PPC)',
             title: 'Effective Pay-per-click (PPC) Campaigns',
             description: 'Maximize your online sales and revenue with our PPC services. We offer Google Ads, Bing Ads, and Facebook Ads to ensure your ads reach the right audience and achieve your marketing goals.',
             image: '/services-brief/ppc.png',
             features: ['Google Ads', 'Bing Ads', 'Facebook Ads'],
             buttonText: 'LEARN ABOUT PPC',
             buttonLink: '/services/ppc'
-        },
-        {
-            subtitle: 'Press Release Services',
-            title: 'Impactful Press Releases',
-            description: 'Enhance your online visibility and credibility with our Press Release services. We provide Press Release Writing and Distribution to ensure your news reaches the right audience.',
-            image: '/services-brief/press.png',
-            features: ['Press Release Writing', 'Press Release Distribution', 'Increase Visibility'],
-            buttonText: 'DISCOVER PRESS RELEASE SERVICES',
-            buttonLink: '/services/press-release'
         },
         {
             subtitle: 'Reputation Management',
@@ -71,7 +61,16 @@ const ServicesBrief: React.FC<ServicesBriefProps> = () => {
             features: ['Brand Monitoring', 'Crisis Management', 'Review Management'],
             buttonText: 'LEARN ABOUT REPUTATION MANAGEMENT',
             buttonLink: '/services/reputation-management'
-        }
+        },
+        {
+            subtitle: 'Influencer Marketing',
+            title: 'Impactful Influencer Marketing',
+            description: 'Amplify your brand’s reach and engagement through our strategic Influencer Marketing services. We connect you with the right influencers to create authentic and compelling content that resonates with your target audience.',
+            image: '/services-brief/influencer.png',
+            features: ['Influencer Selection', 'Content Creation', 'Campaign Management'],
+            buttonText: 'DISCOVER INFLUENCER MARKETING',
+            buttonLink: '/services/influencer-marketing'
+        },
     ];
 
     const [active, setActive] = useState<number>(0);

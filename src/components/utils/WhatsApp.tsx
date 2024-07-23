@@ -50,19 +50,19 @@ const WhatsApp: React.FC<WhatsAppProps> = () => {
 
                 className={`${showAll ? "hidden" : ""} rounded-full font-semibold ${backgroundColor} transition-all text-white flex justify-center space-x-2 items-center px-3 py-3 cursor-pointer`}
             >
-                <CurrentIcon color='#fff' size={30} />
+                <CurrentIcon color='#fff' size={45} />
             </div>
 
             {showAll && (
                 <>  <Link href="https://wa.me/918818828823" className="rounded-full font-semibold bg-[#26C943] text-white flex justify-center space-x-2 items-center px-3 py-3" target="_blank">
-                    <motion.div whileHover={{ scale: 1.15 }} whileTap={{ scale: 0.9 }}> <FaWhatsapp color='#fff' size={30} /> </motion.div>
+                    <motion.div whileHover={{ scale: 1.15 }} whileTap={{ scale: 0.9 }}> <FaWhatsapp color='#fff' size={45} /> </motion.div>
                 </Link>
                     <Link href="https://t.me/Teamglossour" className="rounded-full font-semibold bg-[#34AAE2] text-white flex justify-center space-x-2 items-center px-3 py-3" target="_blank">
-                        <motion.div whileHover={{ scale: 1.15 }} whileTap={{ scale: 0.9 }}> <FaTelegram color='#fff' size={30} /> </motion.div>
+                        <motion.div whileHover={{ scale: 1.15 }} whileTap={{ scale: 0.9 }}> <FaTelegram color='#fff' size={45} /> </motion.div>
                     </Link>
 
                     <Link href="https://www.instagram.com/glossour/" className="rounded-full font-semibold bg-instagram-gradient text-white flex justify-center space-x-2 items-center px-3 py-3" target="_blank">
-                        <motion.div whileHover={{ scale: 1.15 }} whileTap={{ scale: 0.9 }}> <FaInstagram color='#fff' size={30} /> </motion.div>
+                        <motion.div whileHover={{ scale: 1.15 }} whileTap={{ scale: 0.9 }}> <FaInstagram color='#fff' size={45} /> </motion.div>
                     </Link>
                 </>
             )}
