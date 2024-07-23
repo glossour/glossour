@@ -44,7 +44,7 @@ const WhatsApp: React.FC<WhatsAppProps> = () => {
             ref={containerRef}
             initial={{ width: 90 }}
             animate={{ width: showAll ? 200 : 0 }}
-            transition={{ type: 'spring', stiffness: 300 }} className='flex justify-center items-center bottom-5 right-5 md:bottom-10 fixed space-x-3  p-2.5 rounded-full z-[100] md:right-10'>
+            transition={{ type: 'spring', stiffness: 300 }} className='flex justify-center items-center bottom-5 right-10 md:bottom-10 fixed space-x-3  p-2.5 rounded-full z-[100] md:right-10'>
             <div
                 onClick={handleIconClick}
 
