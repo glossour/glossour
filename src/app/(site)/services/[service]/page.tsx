@@ -29,7 +29,7 @@ export default function Page() {
     const serviceData = Services[pathname];
 
     return (
-        <div >
+        <div className="overflow-hidden" >
 
             <Hero {...serviceData.hero_section} />
             <WhatMakeDiffCompo {...serviceData.whatmakediff} />

@@ -13,7 +13,7 @@ export default function page() {
       <AuroraHero />
       <div className='xl:px-64 lg:px-20 md:px-8 px-4'>
 
-        <Space h={16} />
+
         <ServicesBrief />
         <Analytics />
         <CustomerReview />

@@ -117,8 +117,8 @@ const Carusal = () => {
     return (
         <main className="w-full">
             <div className="flex flex-col w-full items-center">
-                <div className="relative w-full md:h-[80vh]   bg-red-200 rounded-2xl md:p-6 p-3 flex flex-col items-center ">
-                    <div className="relative -top-10 h-[40vh] w-full overflow-hidden">
+                <div className="relative w-full md:h-[80vh] h-[40vh]  bg-red-200 rounded-2xl md:p-6 p-3 flex flex-col items-center ">
+                    <div className="relative  h-full w-full overflow-hidden">
                         <AnimatePresence initial={false} custom={direction}>
                             <motion.div
                                 key={imageCount}
@@ -138,7 +138,7 @@ const Carusal = () => {
                                 className="absolute top-0 left-0 w-full rounded-2xl h-full     bg-center bg-cover md:bg-cover bg-no-repeat image"
                             >
                                 <div className="absolute bottom-0 left-0 right-0 md:p-4 p-2 flex justify-between bg-black    rounded-b-2xl text-white">
-                                    <div> <h2 className="md:text-xl text-sm font-bold  text-red-200">
+                                    <div> <h2 className="md:text-xl text-[18px] font-bold  text-red-200">
                                         {IMAGES[activeImageIndex].title}
                                     </h2>
                                         <p className=" text-white text-xs md:text-xl">{IMAGES[activeImageIndex].description}</p></div>
@@ -150,7 +150,7 @@ const Carusal = () => {
                         </AnimatePresence>
                     </div>
 
-                    <div className="md:mt-3 -mt-5 flex">
+                    <div className="mt-3  flex">
                         {IMAGES.map((image, index) => (
                             <button
                                 key={image.id}

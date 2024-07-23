@@ -87,7 +87,7 @@ const ServicesBrief: React.FC<ServicesBriefProps> = () => {
     }, [active]);
 
     return (
-        <div className='w-full overflow-x-hidden'>
+        <div className='w-full overflow-x-hidden py-10'>
             <div className='relative w-full md:p-2 p-1 flex border overflow-x-scroll scroll-bar border-paragraph-200 rounded-md'>
                 <motion.div
                     className="absolute md:top-2 top-1 lg:h-8 h-7 bg-tertiary-200 rounded-md"
