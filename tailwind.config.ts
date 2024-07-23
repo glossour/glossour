@@ -41,6 +41,8 @@ const config: Config = {
           "linear-gradient(to  bottom,  #251DB5 40% , #000000 90%)",
         "button-gray":
           "linear-gradient(to  bottom,  #110D52 40% , #050418 90%)",
+        "instagram-gradient":
+          "linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)",
       },
       animation: {
         "gradient-border": "gradient-border 5s infinite",
