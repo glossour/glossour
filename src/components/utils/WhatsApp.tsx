@@ -57,7 +57,7 @@ const WhatsApp: React.FC<WhatsAppProps> = () => {
                 <>  <Link href="https://wa.me/918818828823" className="rounded-full font-semibold bg-[#26C943] text-white flex justify-center space-x-2 items-center px-3 py-3" target="_blank">
                     <motion.div whileHover={{ scale: 1.15 }} whileTap={{ scale: 0.9 }}> <FaWhatsapp color='#fff' size={30} /> </motion.div>
                 </Link>
-                    <Link href="https://wa.me/918818828823" className="rounded-full font-semibold bg-[#34AAE2] text-white flex justify-center space-x-2 items-center px-3 py-3" target="_blank">
+                    <Link href="https://t.me/Teamglossour" className="rounded-full font-semibold bg-[#34AAE2] text-white flex justify-center space-x-2 items-center px-3 py-3" target="_blank">
                         <motion.div whileHover={{ scale: 1.15 }} whileTap={{ scale: 0.9 }}> <FaTelegram color='#fff' size={30} /> </motion.div>
                     </Link>
 
