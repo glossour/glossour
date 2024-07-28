@@ -24,20 +24,30 @@ const cardVariants = {
 
 export default function Analytics() {
 
-    const Card = ({ icon: Icon, title, description, color }: { icon: React.ElementType, title: string, description: string, color: string }) => (
-        <motion.div
-            whileHover={{ translateY: -10 }}
-            transition={{ duration: 0.3 }}
-            className='md:space-y-5 space-y-2 md:col-span-1 p-12 flex flex-col border-2 justify-center items-center rounded-3xl border-tertiary-200 bg-card-gradient'
-            variants={cardVariants}
-        >
-            <div className='rounded-2xl bg-button-gray shadow-lg shadow-buttonGray-300 backdrop-blur-sm backdrop-filter p-6 flex justify-center items-center'>
-                <Icon color={color} size={26} />
-            </div>
-            <h1 className='text-secondary-100 text-3xl font-bold'>{title}</h1>
-            <p className='text-paragraph-200 font-normal text-sm text-center'>{description}</p>
-        </motion.div>
-    );
+    const Card = ({ icon: Icon, color, title, description, bgImage }: { icon: React.ElementType, color: string, title: string, description: string, bgImage: string }) => {
+        const cardVariants = {
+            hover: { translateY: -10 }
+        };
+
+        return (
+            <motion.div
+                whileHover={cardVariants.hover}
+                transition={{ duration: 0.3 }}
+                className='relative md:space-y-5 space-y-2 md:col-span-1 p-12 flex flex-col justify-center items-center rounded-3xl '
+                style={{ backgroundImage: `url(${bgImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+            >
+                <div className='absolute inset-0 bg-black opacity-50 rounded-3xl'></div> {/* Overlay */}
+                <div className='relative z-10 flex flex-col space-y-3 justify-center items-center'>
+                    <div className='rounded-2xl bg-black p-6  w-fit flex justify-center items-center'>
+                        <Icon color={color} size={26} />
+                    </div>
+                    <h1 className='text-secondary-100 text-3xl font-bold text-center'>{title}</h1>
+                    <p className='text-paragraph-200 font-normal text-sm text-center'>{description}</p>
+                </div>
+            </motion.div>
+        );
+    };
+
     return (
         <div className='w-full  py-16 flex flex-col justify-center items-center'>
             <div className='flex md:flex-row flex-col w-full md:justify-between md:space-y-0 space-y-3'>
@@ -59,36 +69,42 @@ export default function Analytics() {
                     title="Analytics"
                     description="We provide comprehensive analytics to help you track and measure your marketing performance."
                     color="#FACC15"
+                    bgImage={'/analytics/1.png'}
                 />
                 <Card
                     icon={FaBullhorn}
                     title="Campaigns"
                     description="Optimize your marketing campaigns with data-driven insights and reach your target audience effectively."
                     color="#FACC15"
+                    bgImage={'/analytics/2.png'}
                 />
                 <Card
                     icon={FaRocket}
                     title="Growth"
                     description="Leverage our tools to drive growth and achieve your business objectives faster."
                     color="#FACC15"
+                    bgImage={'/analytics/3.png'}
                 />
                 <Card
                     icon={FaUsers}
                     title="Audience"
                     description="Understand your audience better with in-depth analytics and tailor your strategies to their needs."
                     color="#FACC15"
+                    bgImage={'/analytics/4.png'}
                 />
                 <Card
                     icon={FaGlobe}
                     title="Global Reach"
                     description="Expand your global reach with our data-driven marketing strategies and tools."
                     color="#FACC15"
+                    bgImage={'/analytics/5.png'}
                 />
                 <Card
                     icon={FaHandsHelping}
                     title="Support"
                     description="We provide exceptional support to help you navigate and optimize your marketing efforts."
                     color="#FACC15"
+                    bgImage={'/analytics/6.png'}
                 />
             </motion.div>
 

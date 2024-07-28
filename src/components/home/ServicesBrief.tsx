@@ -13,7 +13,7 @@ const ServicesBrief: React.FC<ServicesBriefProps> = () => {
             title: 'Impactful Press Releases',
             description: 'Enhance your online visibility and credibility with our Press Release services. We provide Press Release Writing and Distribution to ensure your news reaches the right audience.',
             image: '/services-brief/press.png',
-            features: ['Press Release Writing', 'Press Release Distribution', 'Increase Visibility'],
+            features: ['Press Release Writing', 'Magazines', 'News Coverage'],
             buttonText: 'DISCOVER PRESS RELEASE SERVICES',
             buttonLink: '/services/press-release'
         },
@@ -40,7 +40,7 @@ const ServicesBrief: React.FC<ServicesBriefProps> = () => {
             title: 'Expert Search Engine Optimization',
             description: 'Enhance your online visibility and drive organic traffic with our expert SEO services. We offer On-Page SEO, Off-Page SEO, and Technical SEO to ensure your site ranks higher on search engines.',
             image: '/services-brief/seo.png',
-            features: ['On-Page SEO', 'Off-Page SEO', 'Technical SEO'],
+            features: ['On-Page SEO', 'Off-Page SEO', 'DA/PA Optimization'],
             buttonText: 'LEARN ABOUT SEO',
             buttonLink: '/services/seo'
         },
