@@ -16,7 +16,7 @@ export default function page() {
             </div>
             <div className='w-full space-y-8 md:space-y-0 md:space-x-8 flex md:flex-row flex-col p-4  bg-tertiary-200 rounded-md'>
                 <div className='md:w-1/4 w-full flex flex-col h-full'>
-                    <img loading='lazy' src="/images/founder.png" alt="" className='w-full   h-[65vh]    rounded-xl' />
+                    <img loading='lazy' src="/images/founder.png" alt="" className='w-full   h-[50vh]    rounded-xl' />
 
 
                 </div>

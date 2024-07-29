@@ -68,42 +68,42 @@ export default function Analytics() {
                     icon={FaChartLine}
                     title="Analytics"
                     description="We provide comprehensive analytics to help you track and measure your marketing performance."
-                    color="#FACC15"
+                    color="#FF0000"
                     bgImage={'/analytics/1.png'}
                 />
                 <Card
                     icon={FaBullhorn}
                     title="Campaigns"
                     description="Optimize your marketing campaigns with data-driven insights and reach your target audience effectively."
-                    color="#FACC15"
+                    color="#FF0000"
                     bgImage={'/analytics/2.png'}
                 />
                 <Card
                     icon={FaRocket}
                     title="Growth"
                     description="Leverage our tools to drive growth and achieve your business objectives faster."
-                    color="#FACC15"
+                    color="#FF0000"
                     bgImage={'/analytics/3.png'}
                 />
                 <Card
                     icon={FaUsers}
                     title="Audience"
                     description="Understand your audience better with in-depth analytics and tailor your strategies to their needs."
-                    color="#FACC15"
+                    color="#FF0000"
                     bgImage={'/analytics/4.png'}
                 />
                 <Card
                     icon={FaGlobe}
                     title="Global Reach"
                     description="Expand your global reach with our data-driven marketing strategies and tools."
-                    color="#FACC15"
+                    color="#FF0000"
                     bgImage={'/analytics/5.png'}
                 />
                 <Card
                     icon={FaHandsHelping}
                     title="Support"
                     description="We provide exceptional support to help you navigate and optimize your marketing efforts."
-                    color="#FACC15"
+                    color="#FF0000"
                     bgImage={'/analytics/6.png'}
                 />
             </motion.div>

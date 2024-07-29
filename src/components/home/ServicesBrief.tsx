@@ -6,7 +6,7 @@ import ServicesCard from '../utils/ServicesCard';
 interface ServicesBriefProps { }
 
 const ServicesBrief: React.FC<ServicesBriefProps> = () => {
-    const services: string[] = ['Press Release', 'Social Media Marketing', 'Website Development', 'Search Engine Optimization(SEO)', 'Pay-per-click (PPC)', 'Reputation Management', 'Influencer Marketing',];
+    const services: string[] = ['Press Release', 'Social Media Marketing', 'Website Development', 'Search Engine Optimization(SEO)', 'Google & Meta Ads(PPC)', 'Reputation Management', 'Influencer Marketing',];
     const ServicesInfo: any[] = [
         {
             subtitle: 'Press Release Services',
@@ -45,8 +45,8 @@ const ServicesBrief: React.FC<ServicesBriefProps> = () => {
             buttonLink: '/services/seo'
         },
         {
-            subtitle: 'Pay-per-click (PPC)',
-            title: 'Effective Pay-per-click (PPC) Campaigns',
+            subtitle: 'Google & Meta Ads(PPC)',
+            title: 'Effective Google & Meta Ads(PPC) Campaigns',
             description: 'Maximize your online sales and revenue with our PPC services. We offer Google Ads, Bing Ads, and Facebook Ads to ensure your ads reach the right audience and achieve your marketing goals.',
             image: '/services-brief/ppc.png',
             features: ['Google Ads', 'Bing Ads', 'Facebook Ads'],

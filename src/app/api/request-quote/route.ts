@@ -4,7 +4,7 @@ import { connectDb } from "@/dbConnection/db";
 import { sendEmail } from "@/controllers/sendEmail";
 import { RequestQuoteHtml } from "@/controllers/emails/requestQuote";
 import { ServiceQuote } from "@/models/requestquote.model"; // Import the Mongoose model
-
+import { Content } from "@/controllers/emails/Services";
 dotenv.config();
 connectDb();
 
@@ -38,7 +38,15 @@ export async function POST(request: Request) {
 
     // Send quotation email
     const subject = "Quotation Request";
-    const template = RequestQuoteHtml({ name, services, budget, website });
+
+    const content = Content(services);
+    const template = RequestQuoteHtml({
+      name,
+      services,
+      budget,
+      website,
+      content,
+    });
     await sendEmail(email, subject, template);
 
     return NextResponse.json({ message: "Quotation sent to the email" });
