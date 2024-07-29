@@ -1,5 +1,5 @@
 'use client'
-import React, { useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { FiArrowRight } from "react-icons/fi";
 import {
     useMotionTemplate,
@@ -13,7 +13,22 @@ const COLORS_TOP = ["#13FFAA", "#1E67C6", "#CE84CF", "#DD335C"];
 
 export const AuroraHero = () => {
     const color = useMotionValue(COLORS_TOP[0]);
+    const [active, setActive] = useState(true);
+    const ref = useRef<HTMLVideoElement>(null);
 
+    useEffect(() => {
+        const video = ref.current;
+
+        if (video) {
+            const handleLoadedData = () => setActive(false);
+            video.addEventListener("loadeddata", handleLoadedData);
+
+            // Cleanup function
+            return () => {
+                video.removeEventListener("loadeddata", handleLoadedData);
+            };
+        }
+    }, [active, ref]);
     useEffect(() => {
         animate(color, COLORS_TOP, {
             ease: "easeInOut",
@@ -44,12 +59,13 @@ export const AuroraHero = () => {
             <div className='w-full justify-start md:justify-end items-center mb-5 md:mb-0 flex '>
 
                 <video
+                    onLoadedData={() => setActive(false)}
                     autoPlay
                     loop
                     muted
-                    className=" object-contain md:w-11/12 w-full   rounded-md "
+                    className={` object-cover md:w-11/12 w-full    rounded-md ${active ? 'z-1' : 'z-10'}`}
                 >
-                    <source src="https://firebasestorage.googleapis.com/v0/b/glossour-43a64.appspot.com/o/WhatsApp%20Video%202024-07-28%20at%2019.54.45_df13f663%20(1)%20(1).mp4?alt=media&token=0d9867b0-3b14-4827-aaa9-87ea5479365c" type="video/mp4" />
+                    <source src="https://firebasestorage.googleapis.com/v0/b/glossour-43a64.appspot.com/o/WhatsApp%20Video%202024-07-28%20at%2019.54.45_df13f663%20(1)%20(1)%20(1).mp4?alt=media&token=9a3b544b-56bc-42ce-966c-219fd5f1d8dc" type="video/mp4" />
 
                 </video>
             </div>
