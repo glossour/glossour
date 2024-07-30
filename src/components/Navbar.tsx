@@ -151,7 +151,7 @@ const Navbar: React.FC<NavbarProps> = ({ }) => {
                     </button>
                 </div>
             </div>
-            <nav className=' navbar xl:max-w-5xl lg:max-w-3xl md:max-w-3xl z-[100] backdrop-blur-md backdrop-filter bg-opacity-30 bg-secondary-300    sm:max-w-sm  max-w-xs top-5  fixed rounded-2xl   border-tertiary-200 border-2   right-0 left-0 mx-auto  md:p-3 py-2 pr-3 text-[14px]  font-medium  justify-between items-center    text-white flex space-x-3'>
+            <nav className=' navbar xl:max-w-5xl lg:max-w-3xl md:max-w-3xl z-[100] backdrop-blur-md backdrop-filter bg-opacity-50 bg-secondary-300    sm:max-w-sm  max-w-xs top-5  fixed rounded-2xl   border-tertiary-200 border-2   right-0 left-0 mx-auto  md:p-3 py-2 pr-3 text-[14px]  font-medium  justify-between items-center    text-white flex space-x-3'>
 
                 <div className=' md:flex hidden justify-start space-x-8  items-center'>
                     <Link href={'/'}>
