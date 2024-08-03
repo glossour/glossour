@@ -74,7 +74,7 @@ const Navbar: React.FC<NavbarProps> = ({ }) => {
                         <button className=''><img loading='lazy' src='/logo/brand.svg' className='w-48 h-full' /></button>
                     </Link>
 
-                    <div className={`mt-5 bg-white text-black rounded font-semibold`}>
+                    <div className={`mt-5 bg-white text-red-200 rounded font-semibold`}>
                         <div onClick={() => handleDropdownToggle('about')}
                             className="flex text-xl px-2 cursor-pointer items-center justify-between rounded-lg py-1.5"
                         >
@@ -104,7 +104,7 @@ const Navbar: React.FC<NavbarProps> = ({ }) => {
                         </ul>
                     </div>
 
-                    <div className='mt-2 bg-white text-black rounded font-semibold'>
+                    <div className='mt-2 bg-white  text-red-200 rounded font-semibold'>
                         <div onClick={() => handleDropdownToggle('services')}
                             className="flex  text-xl cursor-pointer items-center px-2 py-1.5 justify-between rounded-lg"
                         >
@@ -130,14 +130,14 @@ const Navbar: React.FC<NavbarProps> = ({ }) => {
                             <Link onClick={() => setActive(!active)} href={'/services/seo'}><li className='py-1'>Search Engine Optimization(SEO)</li></Link>
                             <Link onClick={() => setActive(!active)} href={'/services/social-media-marketing'}><li className='py-1'>Social Media Marketing</li></Link>
                             <Link onClick={() => setActive(!active)} href={'/services/influencer-marketing'}><li className='py-1'>Influencer Marketing</li></Link>
-                            <Link onClick={() => setActive(!active)} href={'/services/ppc'}><li className='py-1'>Pay-per-click (PPC)</li></Link>
+                            <Link onClick={() => setActive(!active)} href={'/services/ppc'}><li className='py-1'>Google & Meta Ads(PPC)</li></Link>
                             <Link onClick={() => setActive(!active)} href={'/services/reputation-management'}><li className='py-1'>Reputation Management</li></Link>
                             <Link onClick={() => setActive(!active)} href={'/services/press-release'}><li className='py-1'>Press Release</li></Link>
                         </ul>
                     </div>
 
                     <Link href={'/book-meeting'}>
-                        <button onClick={() => setActive(!active)} className='text-white text-xl mt-2 px-2 py-1.5 flex justify-start'>Book Meeting</button>
+                        <button onClick={() => setActive(!active)} className=' text-white text-xl mt-2 px-2 py-1.5 flex justify-start'>Book Meeting</button>
                     </Link>
                 </div>
                 <div>

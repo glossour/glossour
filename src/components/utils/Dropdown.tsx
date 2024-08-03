@@ -275,7 +275,7 @@ const Services: React.FC = () => {
             buttonLink: '/services/social-media-marketing'
         },
         {
-            subtitle: 'Pay-per-click (PPC)',
+            subtitle: 'Google & Meta Ads(PPC)',
             title: 'Effective Pay-per-click (PPC) Campaigns',
             description: 'Maximize your online sales and revenue with our PPC services. We offer Google Ads, Bing Ads, and Facebook Ads to ensure your ads reach the right audience and achieve your marketing goals.',
             image: '/services-brief/ppc.png',
