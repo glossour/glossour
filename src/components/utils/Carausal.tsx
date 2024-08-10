@@ -117,7 +117,7 @@ const Carusal = () => {
     return (
         <main className="w-full">
             <div className="flex flex-col w-full items-center">
-                <div className="relative w-full md:h-[80vh] h-[40vh]  bg-red-200 rounded-2xl md:p-6 p-3 flex flex-col items-center ">
+                <div className="relative w-full md:h-[80vh] h-[32vh]  bg-red-200 rounded-2xl md:p-6 p-3 flex flex-col items-center ">
                     <div className="relative  h-full w-full overflow-hidden">
                         <AnimatePresence initial={false} custom={direction}>
                             <motion.div
@@ -135,13 +135,13 @@ const Carusal = () => {
                                 dragConstraints={{ left: 0, right: 0 }}
                                 dragElastic={1}
                                 onDragEnd={(_, dragInfo) => dragEndHandler(dragInfo)}
-                                className="absolute top-0 left-0 w-full rounded-2xl h-full     bg-center bg-cover md:bg-cover bg-no-repeat image"
+                                className="absolute top-0 left-0 w-full rounded-2xl h-full     bg-center bg-contain md:bg-cover bg-no-repeat "
                             >
                                 <div className="absolute bottom-0 left-0 right-0 md:p-4 p-2 flex justify-between bg-black    rounded-b-2xl text-white">
                                     <div> <h2 className="md:text-xl text-[18px] font-bold  text-red-200">
                                         {IMAGES[activeImageIndex].title}
                                     </h2>
-                                        <p className=" text-white text-xs md:text-xl">{IMAGES[activeImageIndex].description}</p></div>
+                                        <p className=" text-white text-xs hidden md:flex md:text-xl">{IMAGES[activeImageIndex].description}</p></div>
                                     <Link href={IMAGES[activeImageIndex].link}>
                                         <FaArrowRight size={35} color="#fff" className=" -rotate-45" />
                                     </Link>

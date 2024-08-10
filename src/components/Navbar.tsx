@@ -7,7 +7,7 @@ import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 import { usePathname } from 'next/navigation';
 import { FaBars } from 'react-icons/fa';
 import SpringModal from './utils/Form/GetIn';
-import RequestModal from './utils/Form/RequsetQuote';
+
 
 interface NavbarProps {
 }
@@ -130,7 +130,7 @@ const Navbar: React.FC<NavbarProps> = ({ }) => {
                             <Link onClick={() => setActive(!active)} href={'/services/seo'}><li className='py-1'>Search Engine Optimization(SEO)</li></Link>
                             <Link onClick={() => setActive(!active)} href={'/services/social-media-marketing'}><li className='py-1'>Social Media Marketing</li></Link>
                             <Link onClick={() => setActive(!active)} href={'/services/influencer-marketing'}><li className='py-1'>Influencer Marketing</li></Link>
-                            <Link onClick={() => setActive(!active)} href={'/services/ppc'}><li className='py-1'>Google & Meta Ads(PPC)</li></Link>
+                            <Link onClick={() => setActive(!active)} href={'/services/ppc'}><li className='py-1'>Advertisement(Google,Meta & PPC)</li></Link>
                             <Link onClick={() => setActive(!active)} href={'/services/reputation-management'}><li className='py-1'>Reputation Management</li></Link>
                             <Link onClick={() => setActive(!active)} href={'/services/press-release'}><li className='py-1'>Press Release</li></Link>
                         </ul>
